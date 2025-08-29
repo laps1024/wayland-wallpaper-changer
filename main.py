@@ -26,7 +26,7 @@ def check_launch():
     print("[LOG] swww launched successfully")
 
 async def check_wallpapers():
-    extensions = [".png", ".jpg", ".jpeg"]
+    extensions = [".png", ".jpg", ".jpeg", ".gif", ".bmp", ".tiff", ".tif", ".webp", ".pnm", ".tga", ".avif", ".farbfeld", ".svg"]
     print("[LOG] Checking wallpapers")
     global wallpapers
     if not os.path.exists(wallpapers_path):
