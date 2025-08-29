@@ -38,7 +38,7 @@ async def check_wallpapers():
             random.shuffle(files)
             if len(wallpapers) != 0 and len(files) > len(wallpapers):
                 new_files = [os.path.join(wallpapers_path, f) for f in files if os.path.join(wallpapers_path, f) not in wallpapers]
-                print(f"[LOG] New file detected: {new_files}")
+                print(f"[LOG] New file detected: {", ".join(new_files).replace(wallpapers_path,"")}")
             wallpapers = [os.path.join(wallpapers_path,file) for file in files if any(extension in file.lower() for extension in extensions)]
             if len(wallpapers) < 2:
                 raise ValueError("[ERROR] At least 2 files needed")
