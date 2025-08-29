@@ -6,11 +6,13 @@ from argparse import ArgumentParser
 import asyncio
 
 parser = ArgumentParser()
-parser.add_argument("-t", "--time", help="Интервал смены обоев", default="30m")
-parser.add_argument("-p", "--path", help="Путь до папки с обоями (только картинки)")
+parser.add_argument("-t", "--time", help="Interval", default="30m")
+parser.add_argument("-p", "--path", help="Images directory path")
 args = parser.parse_args()
-update_time: int = int(args.time[:-1]) * 60
-wallpapers_path = args.path
+if "m" in args.time:
+    update_time = int(args.time[:-1]) * 60
+else: update_time = int(args.time) * 60
+wallpapers_path = os.path.expanduser(args.path)
 wallpapers = []
 current_wallpaper = None
 
