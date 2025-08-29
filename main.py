@@ -61,8 +61,6 @@ async def change_wallpaper(wallpaper):
 async def start_timer():
     while not wallpapers:
         await asyncio.sleep(0.1)
-    wallpaper = get_unique_wallpaper()
-    await change_wallpaper(wallpaper)
     while True:
         wallpaper = get_unique_wallpaper()
         await change_wallpaper(wallpaper)
