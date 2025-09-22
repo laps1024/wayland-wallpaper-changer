@@ -52,7 +52,6 @@ def get_unique_wallpaper():
         if choice != current_wallpaper:
             return choice
 
-
 async def change_wallpaper(wallpaper):
     global current_wallpaper
     await asyncio.to_thread(subprocess.run, f"swww img {wallpaper}", shell=True)
