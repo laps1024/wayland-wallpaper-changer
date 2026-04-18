@@ -18,19 +18,19 @@ Install the required dependencies:
 **Arch Linux**
 
 ```bash
-sudo pacman -S swww
+sudo pacman -S awww
 ```
 
 **Fedora**
 
 ```bash
-sudo dnf install swww
+sudo dnf install awww
 ```
 
 **Ubuntu / Debian**
 
 ```bash
-sudo apt install swww
+sudo apt install awww
 ```
 
 ---
