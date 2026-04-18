@@ -20,10 +20,10 @@ if wallpapers_path is None or wallpapers_path.strip() == "":
     raise FileNotFoundError("[ERROR] Wallpaper directory not found")
 
 def check_launch():
-    result = subprocess.run("ps aux | grep '[s]www-daemon'",shell=True,capture_output=True,text=True)
+    result = subprocess.run("ps aux | grep '[a]www-daemon'",shell=True,capture_output=True,text=True)
     if not result.stdout.strip():
-        subprocess.Popen("swww-daemon",shell=True)
-    print("[LOG] swww launched successfully")
+        subprocess.Popen("awww-daemon",shell=True)
+    print("[LOG] awww launched successfully")
 
 async def check_wallpapers():
     extensions = [".png", ".jpg", ".jpeg", ".gif", ".bmp", ".tiff", ".tif", ".webp", ".pnm", ".tga", ".avif", ".farbfeld", ".svg"]
@@ -54,7 +54,7 @@ def get_unique_wallpaper():
 
 async def change_wallpaper(wallpaper):
     global current_wallpaper
-    await asyncio.to_thread(subprocess.run, f"swww img {wallpaper}", shell=True)
+    await asyncio.to_thread(subprocess.run, f"awww img {wallpaper}", shell=True)
     print(f"[LOG] {time.strftime("%H:%M",time.localtime())}: Changed wallpaper to {wallpaper}")
     current_wallpaper = wallpaper
 
