@@ -60,6 +60,6 @@ python3 main.py --time 30m --path ~/Pictures/Wallpapers
 
 ## Notes
 
-* Make sure `swww-daemon` is installed and running.
+* Make sure `awww-daemon` is installed and running.
 * The script requires **at least 2 images** in the specified folder to shuffle properly.
 * Supports common image formats: `.png`, `.jpg`, `.jpeg`.
