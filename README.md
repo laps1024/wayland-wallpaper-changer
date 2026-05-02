@@ -1,6 +1,6 @@
 # Wayland Wallpaper Changer
 
-Simple, lightweight Python script to shuffle wallpapers on your desktop. Powered by swww, fully compatible with Wayland.
+Simple, lightweight Python script to shuffle wallpapers on your desktop. Powered by awww, fully compatible with Wayland.
 
 ---
 
